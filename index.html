@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <script src="jquery-3.2.1.js"></script>
+    <title>My Love</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="My Portfolio">
+    <meta property="og:description" content="Built with Next Academy">
+    <meta property="og:site_name" content="My Portfolio">
+    <meta property="og:image" content="https://www.nextacademy.com/img/share/nextacademy-generic.jpg">
+  </head>
+  <body>
+    <div id="navbar">
+      <a href="#about" class="navlinks">Go To About Me</a>
+      <a href="#show" class="navlinks">My past Experience</a>
+    </div>
+
+    <div class="container">
+
+      <div class="small-container" id="about">
+        <h1>Hello, I'm Austin.</h1>
+        <p>This is my first website,</P>
+          <p> and I'm interested in coding.</p>
+        <p>I'm from Melaka and I love music.</p>
+        <p>This is how I look like.</p>
+        <img src=https://hype.my/wp-content/uploads/2016/04/Jessica-Jung-Renames-Blanc-Eclare-3.png>
+      </div>
+
+      <div class="small-container" id="show">
+        <h1>What I've done in the past</h1>
+        <ol>
+          <li>Learn to code</li>
+          <li>Some digital marketing</li>
+          <li>Travel</li>
+          <a href=http://www.koreaboo.com/tag/jessica-jung/>
+
+        </ol>
+        <a href="https://www.nextacademy.com">
+          Learn to code from Next Academy
+        </a>
+      </div>
+
+      <div calss="small-container">
+        <button id="surprise-button">Click me for surprise!</button>
+        <div id="haha"></div>
+
+    </div>
+  </body>
+  <script>
+    $(document).ready(function() {
+      $("#surprise-button").click(function(e) {
+        $.get("http://api.giphy.com/v1/gifs/random?tag=pussy&api_key=dc6zaTOxFJmzC", function(res) {
+          $('#haha').html('<img src="' + res.data.image_url + '">' )
+        })
+      })
+    })
+  </script>
+</html>
